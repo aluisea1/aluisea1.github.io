@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OKR Scoring Tool</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+      font-size: 20px;
+      color: navy;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .input-container input[type="text"] {
+      flex: 2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    .input-container .score {
+      flex: 1;
+      padding: 10px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 3px;
+      font-size: 14px;
+      text-align: center;
+      width: 25%;
+    }
+
+    .input-container .score-green {
+      background-color: #8bc34a;
+      color: #fff;
+    }
+
+    .input-container .score-orange {
+      background-color: #ffc107;
+      color: #fff;
+    }
+
+    .input-container .score-red {
+      background-color: #f44336;
+      color: #fff;
+    }
+
+    .feedback {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .button-container button:hover {
+      background-color: #45a049;
+    }
+
+    .button-container button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>OKR Scoring Tool</h1>
+
+    <div class="section">
+      <div class="input-container">
+        <label for="objective-name">Objective Name:</label>
+        <input type="text" id="objective-name" oninput="adjustInputSize(this)" />
+        <span id="objective-score" class="score"></span>
+      </div>
+      <div class="feedback">
+        <label>Objective Feedback:</label>
+        <span id="objective-feedback"></span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="input-container">
+        <label for="key-result-name">Key Result Name:</label>
+        <input type="text" id="key-result-name" oninput="adjustInputSize(this)" />
+        <span id="key-result-score" class="score"></span>
+      </div>
+      <div class="feedback">
+        <label>Key Result Feedback:</label>
+        <span id="key-result-feedback"></span>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button onclick="calculateScores()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function calculateScores() {
+      const objectiveName = document.getElementById('objective-name').value;
+      const objectiveScore = document.getElementById('objective-score');
+      const objectiveFeedback = document.getElementById('objective-feedback');
+
+      const actionVerbs = [
+        'provide', 'create', 'become', 'increase', 'minimize', 'reduce', 'support',
+        'streamline', 'convert', 'upgrade', 'restore', 'standardize', 'build',
+        'offer', 'decrease', 'enhance', 'align', 'automate', 'maximize', 'save'
+      ];
+
+      const businessImpacts = [
+        'performance', 'risk', 'cost', 'scale', 'customer', 'client', 'satisfaction',
+        'quality', 'efficiency', 'innovation', 'productivity', 'profit', 'reduction',
+        'regulatory', 'regulations', 'compliance',
+        'speed', 'transparency', 'operations', 'analytics', 'revenue', 'growth', 'time'
+      ];
+
+      const actionVerb = actionVerbs.some(verb => objectiveName.toLowerCase().includes(verb)) ? 1 : 0;
+      const businessImpact = businessImpacts.some(impact => objectiveName.toLowerCase().includes(impact)) ? 1 : 0;
+      const objectiveScoreValue = Math.round(((actionVerb + businessImpact) / 2) * 100);
+
+      objectiveScore.textContent = objectiveScoreValue + '%';
+      objectiveScore.className = 'score';
+      if (objectiveScoreValue === 100) {
+        objectiveScore.classList.add('score-green');
+      } else if (objectiveScoreValue >= 50 && objectiveScoreValue <= 70) {
+        objectiveScore.classList.add('score-orange');
+      } else {
+        objectiveScore.classList.add('score-red');
+      }
+
+      if (actionVerb === 0) {
+        objectiveFeedback.textContent = 'The objective is missing an action statement, i.e., "minimize", "maximize", "reduce", "grow". Try using a strong impact verb to declare your desired impact.';
+      } else if (businessImpact === 0) {
+        objectiveFeedback.textContent = 'The objective is not clearly aligned to a business impact, i.e., "risk reduction", "revenue growth", "client experience", "performance", etc.';
+      } else {
+        objectiveFeedback.textContent = 'This objective looks great!';
+      }
+
+      const keyResultName = document.getElementById('key-result-name').value;
+      const keyResultScore = document.getElementById('key-result-score');
+      const keyResultFeedback = document.getElementById('key-result-feedback');
+
+      const actionVerb2 = actionVerbs.some(verb => keyResultName.toLowerCase().includes(verb)) ? 1 : 0;
+      const numericValue = /\d/.test(keyResultName) ? 1 : 0;
+      const dateValue = /\d{1,2}\/\d{1,2}\/\d{4}/.test(keyResultName) ? 1 : 0;
+      const keyResultScoreValue = Math.round(((actionVerb2 + numericValue + dateValue) / 3) * 100);
+
+      keyResultScore.textContent = keyResultScoreValue + '%';
+      keyResultScore.className = 'score';
+      if (keyResultScoreValue === 100) {
+        keyResultScore.classList.add('score-green');
+      } else if (keyResultScoreValue >= 50 && keyResultScoreValue <= 70) {
+        keyResultScore.classList.add('score-orange');
+      } else {
+        keyResultScore.classList.add('score-red');
+      }
+
+      if (actionVerb2 === 0) {
+        keyResultFeedback.textContent = 'The key result is missing an action statement, i.e., "achieve", "deliver", "complete", "implement". Try using a strong action verb to declare what needs to be done.';
+      } else if (numericValue === 0) {
+        keyResultFeedback.textContent = 'The key result is missing a measurable numeric value. Ensure the key result is quantifiable.';
+      } else if (dateValue === 0) {
+        keyResultFeedback.textContent = 'The key result is missing an end date. Ensure the key result has a clear deadline.';
+      } else {
+        keyResultFeedback.textContent = 'This key result looks great!';
+      }
+    }
+
+    function adjustInputSize(input) {
+      input.style.width = (input.value.length + 1) * 8 + 'px';
+    }
+  </script>
+</body>
+</html>
