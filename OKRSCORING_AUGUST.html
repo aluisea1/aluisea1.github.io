@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #ffffff; color: rgba(255, 255, 255, 0.6); -webkit-text-stroke: rgba(255, 255, 255, 0.6); background-color: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #ffffff; color: rgba(255, 255, 255, 0.6); -webkit-text-stroke: rgba(255, 255, 255, 0.6); background-color: #000000; min-height: 19.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;OKR Scoring Tool&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #f2f2f2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 90%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 600px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: navy;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.input-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.input-container input[type="text"] {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex: 2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.input-container .score {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 25%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.input-container .score-green {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #8bc34a;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.input-container .score-orange {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #ffc107;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.input-container .score-red {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #f44336;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.feedback {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.4;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: red;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.button-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.button-container button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #4caf50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.button-container button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #45a049;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.button-container button:disabled {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: not-allowed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;OKR Scoring Tool&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="input-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="objective-name"&gt;Objective Name:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="objective-name" oninput="adjustInputSize(this)" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span id="objective-score" class="score"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="feedback"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;Objective Feedback:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span id="objective-feedback" class="feedback"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="input-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="key-result-name"&gt;Key Result Name:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="key-result-name" oninput="adjustInputSize(this)" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span id="key-result-score" class="score"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="feedback"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;Key Result Feedback:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span id="key-result-feedback" class="feedback"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="button-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button onclick="calculateScores()"&gt;Submit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function calculateScores() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const objectiveName = document.getElementById('objective-name').value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const objectiveScore = document.getElementById('objective-score');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const objectiveFeedback = document.getElementById('objective-feedback');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const actionVerbs = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'provide', 'create', 'become', 'increase', 'minimize', 'reduce', 'support',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'streamline', 'convert', 'upgrade', 'restore', 'standardize', 'build',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'offer', 'decrease', 'enhance', 'align', 'automate', 'maximize', 'save'</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const businessImpacts = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'performance', 'risk', 'cost', 'scale', 'customer', 'client', 'satisfaction',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'quality', 'efficiency', 'innovation', 'productivity', 'profit', 'reduction',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'regulatory', 'regulations', 'compliance',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'speed', 'transparency', 'operations', 'analytics', 'revenue', 'growth', 'time'</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const actionVerb = actionVerbs.some(verb =&gt; objectiveName.toLowerCase().includes(verb)) ? 1 : 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const businessImpact = businessImpacts.some(impact =&gt; objectiveName.toLowerCase().includes(impact)) ? 1 : 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const objectiveScoreValue = Math.round(((actionVerb + businessImpact) / 2) * 100);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>objectiveScore.textContent = objectiveScoreValue + '%';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>objectiveScore.className = 'score';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (objectiveScoreValue === 100) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>objectiveScore.classList.add('score-green');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else if (objectiveScoreValue &gt;= 50 &amp;&amp; objectiveScoreValue &lt;= 70) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>objectiveScore.classList.add('score-orange');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>objectiveScore.classList.add('score-red');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (actionVerb === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>objectiveFeedback.textContent = 'The objective is missing an action statement, i.e., "minimize", "maximize", "reduce", "grow". Try using a strong impact verb to declare your desired impact.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else if (businessImpact === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>objectiveFeedback.textContent = 'The objective is not clearly aligned to a business impact, i.e., "risk reduction", "revenue growth", "client experience", "performance", etc.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>objectiveFeedback.textContent = 'This objective looks great!';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const keyResultName = document.getElementById('key-result-name').value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const keyResultScore = document.getElementById('key-result-score');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const keyResultFeedback = document.getElementById('key-result-feedback');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const actionVerb2 = actionVerbs.some(verb =&gt; keyResultName.toLowerCase().includes(verb)) ? 1 : 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const numericValue = /\d/.test(keyResultName) ? 1 : 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const dateValue = /\d{1,2}\/\d{1,2}\/\d{4}/.test(keyResultName) ? 1 : 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const keyResultScoreValue = Math.round(((actionVerb2 + numericValue + dateValue) / 3) * 100);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>keyResultScore.textContent = keyResultScoreValue + '%';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>keyResultScore.className = 'score';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (keyResultScoreValue === 100) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>keyResultScore.classList.add('score-green');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else if (keyResultScoreValue &gt;= 50 &amp;&amp; keyResultScoreValue &lt;= 70) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>keyResultScore.classList.add('score-orange');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>keyResultScore.classList.add('score-red');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (actionVerb2 === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>keyResultFeedback.textContent = 'The key result is missing an action statement, i.e., "achieve", "deliver", "complete", "implement". Try using a strong action verb to declare what needs to be done.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else if (numericValue === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>keyResultFeedback.textContent = 'The key result is missing a measurable numeric value. Ensure the key result is quantifiable.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else if (dateValue === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>keyResultFeedback.textContent = 'The key result is missing an end date. Ensure the key result has a clear deadline.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>keyResultFeedback.textContent = 'This key result looks great!';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function adjustInputSize(input) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>input.style.width = (input.value.length + 1) * 8 + 'px';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+</body>
+</html>
